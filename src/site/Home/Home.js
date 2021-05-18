@@ -1,12 +1,12 @@
-import React, {useState} from "react";
-// import { Link } from "@reach/router";
+import React from "react";
+import Sidebar from '../shared/Sidebar/Sidebar';
 
 
 function Home() {
 
   return(
     <div>
-      Donals home
+        <Sidebar />
     </div>
   )
 
