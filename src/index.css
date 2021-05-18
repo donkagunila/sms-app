@@ -11634,6 +11634,7 @@ a.text-white:hover {
 .navbar-vertical .navbar-nav .nav-link {
   display: flex;
   align-items: center;
+  color:#6e84a3;
 }
 .navbar-vertical .navbar-nav .nav-link[data-toggle="collapse"]:after {
   display: block;

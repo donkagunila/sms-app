@@ -27,7 +27,7 @@ function Sidebar(){
 
   return(
     <Router>
-      <nav class="navbar navbar-vertical fixed-left navbar-expand-md " id="sidebar">
+      <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light " id="sidebar">
       
       
       <div class="container-fluid">
@@ -78,53 +78,32 @@ function Sidebar(){
         
         
           <ul class="navbar-nav">
-          <Link to="/" className="nav-item">
-              <a class="nav-link" href="#sidebarDashboards" >
-                <i className="fe"> <FiHome/></i>
-                Dashboard
-              </a>
-            
+
+            <Link to="/" className="nav-item">
+                <a class="nav-link" href="#sidebarDashboards" >
+                  <i className="fe"> <FiHome/></i>
+                  Dashboard
+                </a>
             </Link>
 
 
             <Link to="/transactions" className="nav-item">
-              <a class="nav-link" href="#sidebarDashboards" >
-              <i className="fe"> <FiInbox/></i> Transactions
+              <a class="nav-link" >
+                <i className="fe"> <FiInbox/></i> Transactions
               </a>
-            
             </Link>
 
             <Link to="/campaigns" className="nav-item">
               <a class="nav-link" href="#sidebarDashboards" >
-              <i className="fe"> <FiGrid/></i> Campaigns
+                <i className="fe"> <FiGrid/></i> Campaigns
               </a>
-            
             </Link>
 
-          
-          
-                
-        
-
-          </ul>
-
-        
-          <hr class="navbar-divider my-3" />
-
-        
-          <h6 class="navbar-heading">
-            Administration
-          </h6>
-
-          
-          <ul class="navbar-nav mb-md-4">
-
-
-          <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link " href="docs/changelog.html">
               <i className="fe"> <FiUsers/></i> Sender Names
               </a>
-            </li>
+          </li>
 
         
 
@@ -141,7 +120,11 @@ function Sidebar(){
               <i className="fe"> <FiUsers/></i> Clients
               </a>
             </li>
+
           </ul>
+
+
+
 
           <hr class="navbar-divider my-3" />
 
