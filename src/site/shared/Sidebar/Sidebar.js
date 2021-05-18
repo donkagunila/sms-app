@@ -4,6 +4,7 @@ import pic from '../../../img/pic.jpeg';
 import { useHistory, 
          BrowserRouter as Router, 
          Link,
+         NavLink,
         Switch,
       Route } from "react-router-dom";
 
@@ -79,25 +80,26 @@ function Sidebar(){
         
           <ul class="navbar-nav">
 
-            <Link to="/" className="nav-item">
-                <a class="nav-link" href="#sidebarDashboards" >
-                  <i className="fe"> <FiHome/></i>
-                  Dashboard
-                </a>
-            </Link>
+            <li className="nav-item">
+              <NavLink exact to="/" className="nav-link" activeClassName="active">
+                    <i className="fe"> <FiHome/></i>
+                    Dashboard
+              </NavLink>
+            </li>
 
+           
 
-            <Link to="/transactions" className="nav-item">
-              <a class="nav-link" >
+          <li className="nav-item ">
+            <NavLink to="/transactions" className="nav-link" activeClassName="active">
                 <i className="fe"> <FiInbox/></i> Transactions
-              </a>
-            </Link>
+            </NavLink>
+          </li>
 
-            <Link to="/campaigns" className="nav-item">
-              <a class="nav-link" href="#sidebarDashboards" >
+          <li className="nav-item ">
+            <NavLink to="/campaigns" className="nav-link" activeClassName="active">
                 <i className="fe"> <FiGrid/></i> Campaigns
-              </a>
-            </Link>
+            </NavLink>
+          </li>
 
             <li class="nav-item">
               <a class="nav-link " href="docs/changelog.html">
