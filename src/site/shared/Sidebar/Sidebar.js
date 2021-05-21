@@ -14,6 +14,7 @@ import { FiClipboard, FiCreditCard, FiGrid, FiHome, FiInbox, FiPieChart, FiUsers
 import Home from '../../Home/Home';
 import Transactions from '../../Transacrions/Transactions';
 import Dashboard from '../../Dashboad/Dashboard';
+import Senders from '../../Senders/Senders';
 
 
 function Sidebar(){
@@ -102,9 +103,9 @@ function Sidebar(){
           </li>
 
             <li class="nav-item">
-              <a class="nav-link " href="docs/changelog.html">
-              <i className="fe"> <FiUsers/></i> Sender Names
-              </a>
+              <NavLink to="/senders" className="nav-link" activeClassName="active"> 
+                <i className="fe"> <FiUsers/></i> Sender Names
+              </NavLink>
           </li>
 
         
@@ -219,9 +220,13 @@ function Sidebar(){
         <Route path="/transactions">
           <Transactions />
         </Route>
+        <Route path="/senders">
+          <Senders />
+        </Route>
         <Route path="/">
           <Dashboard />
         </Route>
+        
           
       </Switch>
 
