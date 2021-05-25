@@ -5,7 +5,7 @@ export default function Transactions() {
   return (
     <div className="main-content">
           
-          <div class="header">
+      <div class="header">
         <div class="container-fluid">
 
           

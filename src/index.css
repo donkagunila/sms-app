@@ -3754,6 +3754,7 @@ input[type="submit"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 .nav-link:focus,
 .nav-link:hover {
@@ -3772,7 +3773,9 @@ input[type="submit"].btn-block {
   border: 1px solid transparent;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  
 }
+
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
   border-color: transparent transparent transparent;
@@ -13887,4 +13890,11 @@ button:focus {
 }
 .select2-selection__placeholder {
   color: #b1c2d9;
+}
+.dzu-dropzone {
+  min-height: calc(100vh - 300px) !important;
+}
+.dzu-inputLabel{
+  font-family: 'Lato', sans-serif !important;
+  color: #8396b0 !important;
 }

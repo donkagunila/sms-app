@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../../img/logo.png';
 import pic from '../../../img/pic.jpeg';
 import { useHistory, 
@@ -15,11 +15,16 @@ import Home from '../../Home/Home';
 import Transactions from '../../Transacrions/Transactions';
 import Dashboard from '../../Dashboad/Dashboard';
 import Senders from '../../Senders/Senders';
+import { Button, Collapse } from 'react-bootstrap';
+import ImportContacts from '../../Import/Import';
+import ManageContacts from '../../ManageContacts/ManageContacts';
 
 
 function Sidebar(){
 
   const history = useHistory();
+  const [open, setOpen] = useState(false);
+
 
   const handleLogout = () => {
      // create user object
@@ -101,6 +106,34 @@ function Sidebar(){
                 <i className="fe"> <FiGrid/></i> Campaigns
             </NavLink>
           </li>
+
+          <li className="nav-item ">
+            <a className="nav-link"  
+               onClick={() => setOpen(!open)} 
+               aria-controls="example-collapse-text"
+               aria-expanded={open}>
+            <i className="fe"> <FiClipboard/></i> Contacts
+            </a>
+           
+          </li>
+
+        
+        <Collapse in={open}>
+        <div id="example-collapse-text">
+          <ul class="nav nav-sm flex-column">
+            <li class="nav-item">
+            <NavLink to="/import-contacts" className="nav-link" activeClassName="active"> 
+                Import Contacts
+            </NavLink>
+            </li>
+            <li class="nav-item">
+              <NavLink to="/manage-contacts" className="nav-link" activeClassName="active"> 
+                Manage Contacts
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </Collapse>
 
             <li class="nav-item">
               <NavLink to="/senders" className="nav-link" activeClassName="active"> 
@@ -220,6 +253,14 @@ function Sidebar(){
         <Route path="/transactions">
           <Transactions />
         </Route>
+        <Route path="/import-contacts">
+          <ImportContacts />
+        </Route>
+
+        <Route path="/manage-contacts">
+          <ManageContacts />
+        </Route>
+
         <Route path="/senders">
           <Senders />
         </Route>
