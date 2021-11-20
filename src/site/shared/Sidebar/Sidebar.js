@@ -3,7 +3,6 @@ import logo from '../../../img/logo.png';
 import pic from '../../../img/pic.jpeg';
 import { useHistory, 
          BrowserRouter as Router, 
-         Link,
          NavLink,
         Switch,
       Route } from "react-router-dom";
@@ -18,6 +17,8 @@ import Senders from '../../Senders/Senders';
 import { Button, Collapse } from 'react-bootstrap';
 import ImportContacts from '../../Import/Import';
 import ManageContacts from '../../ManageContacts/ManageContacts';
+import Corporates from '../../Corporates/Corporates';
+import Client from '../../Pages/Clients/index';
 
 
 function Sidebar(){
@@ -92,6 +93,19 @@ function Sidebar(){
                     Dashboard
               </NavLink>
             </li>
+
+            <li className="nav-item ">
+            <NavLink to="/clients" className="nav-link" activeClassName="active">
+                <i className="fe"> <FiUsers/></i> Clients
+            </NavLink>
+          </li>
+
+
+            <li className="nav-item ">
+            <NavLink to="/corporates" className="nav-link" activeClassName="active">
+                <i className="fe"> <FiUsers/></i> Corporates
+            </NavLink>
+          </li>
 
            
 
@@ -256,6 +270,16 @@ function Sidebar(){
         <Route path="/import-contacts">
           <ImportContacts />
         </Route>
+
+        <Route path="/corporates">
+          <Corporates />
+        </Route>
+
+
+        <Route path="/clients">
+          <Client />
+        </Route>
+
 
         <Route path="/manage-contacts">
           <ManageContacts />

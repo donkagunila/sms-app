@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal }  from 'react-bootstrap';
-import { FiCreditCard, FiInfo, FiMessageCircle, FiPieChart, FiPlus, FiPlusCircle, FiRadio } from 'react-icons/fi';
+import { FiCreditCard, FiMessageCircle, FiPlusCircle } from 'react-icons/fi';
 
 
 export default function Senders() {

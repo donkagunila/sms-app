@@ -13898,3 +13898,13 @@ button:focus {
   font-family: 'Lato', sans-serif !important;
   color: #8396b0 !important;
 }
+
+.btn-icon {
+  padding-bottom: 10px;
+}
+
+.btn-icon span{
+  margin-left: 10px;
+  position: relative;
+  top: 1px;
+}

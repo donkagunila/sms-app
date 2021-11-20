@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiCreditCard, FiMessageCircle, FiPieChart, FiRadio } from 'react-icons/fi';
+import { FiCreditCard, FiMessageCircle, FiRadio } from 'react-icons/fi';
 import { Bar, PolarArea } from 'react-chartjs-2';
 
 
